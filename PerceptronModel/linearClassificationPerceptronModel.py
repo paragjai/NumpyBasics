@@ -107,11 +107,11 @@ for _ in range(0, max_iterations):
         print("Also called as 'CONVERGED' :P")
         break
 
-    w_old = w
 
-    elif _ == max_iterations-1:
+    elif (_ == max_iterations-1):
         print("We have not learnt the desired weights. Try for few less or few more number of iterations.")
 
+    w_old = w
 
 
 
