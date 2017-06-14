@@ -77,7 +77,7 @@ delta = 1E-7  # a hyper-parameter
 
 
     # Then,
-        # if np.sum(w_old-w)/ no_of_data_points  < delta :
+        # if np.sum(np.abs(w_old-w))/ no_of_data_points  < delta :
         # then we have learnt our weights and we break out of the loop
 
     # Else,
@@ -99,7 +99,7 @@ for _ in range(0, max_iterations):
         if y_i != y_hat_i:
             w = w + learning_rate * y_i * x_i
 
-    numerator = float(np.abs(np.sum(w_old-w)))
+    numerator = float(np.sum(np.abs(w_old-w)))
     denominator = no_of_data_points
 
     if numerator/denominator < delta: # similar to tf.reduce_mean(w_old - w)
