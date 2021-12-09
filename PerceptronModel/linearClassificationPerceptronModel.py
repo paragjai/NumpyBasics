@@ -61,7 +61,7 @@ delta = 1E-7  # a hyper-parameter
 #                     , if w.dot(x_i) = 0, then x_i is a point which falls on the decision boundary itelf,
 #                       and decision boundary is a NO MAN'S LAND. Therefore, x_i neither belongs to class +1 or class -1
 #                       y_hat = 0
-#                     , if w.dot(x_i) = 0, then y_hat = -1
+#                     , if w.dot(x_i) < 0, then y_hat = -1
 
 # This is referred to as the sign function. In numpy, we use it as np.sign(w.dot(x_i)
 
@@ -86,6 +86,10 @@ delta = 1E-7  # a hyper-parameter
         # else:
         # w_old = w
         # And now do the entire process for one more iteration.
+		
+#Plot before applying perceptron rule 		
+plt.plot(cluster1[:,0], cluster1[:,1], 'ro', cluster2[:,0], cluster2[:,1], 'bo')
+plt.show()		
 
 
 for _ in range(0, max_iterations):
