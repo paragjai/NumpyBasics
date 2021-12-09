@@ -1,0 +1,26 @@
+Door No. 1 2 3 4
+Prize	 0 0 1 0
+
+Case 1: You don't change the door:
+You would win if and only if you had chosen the door with the car.
+P(winning) = 1/4 = 25%
+
+Case 2: You change the door:
+You would win if initially you had chosen the door with a goat behind it.
+P(initially you had chosen the door with a goat behind it) = 3/4
+
+AND
+
+You choose a door with prize behind it out of the two
+P = 1/2
+
+P = (1/2)*(3/4) = 3/8
+
+1/8 = 12.5 percent
+3/8 = 37.5 percent
+
+P = 37.5%
+
+37.5% > 25%
+Therefore, its better to switch.
+
